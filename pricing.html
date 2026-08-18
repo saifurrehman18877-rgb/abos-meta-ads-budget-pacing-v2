@@ -31,6 +31,11 @@
             font-family: 'Roboto', sans-serif;
         }
     </style>
+    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+    <script>
+      Paddle.Environment.set("production");
+      Paddle.Initialize({ token: "live_2a334460f66dcc646589b47f8b1" });
+    </script>
 </head>
 <body class="body-font">
     <nav class="bg-white shadow-sm">
@@ -106,7 +111,7 @@
                             Priority support
                         </li>
                     </ul>
-                    <a href="https://sandbox-pay.paddle.io/hsc_01m0bg9nd93y4wnt208haaeb63_en6caa3ghsd1v2rs69venze69n6hrfe2?price_id=pri_01m0bg1kvz0fazpq1w0f0rbbxc" class="block w-full bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white text-center py-3 rounded-md font-medium">Get Pro</a>
+                    <button type="button" onclick="Paddle.Checkout.open({items:[{priceId:'pri_01m0bhtp40qevyynw5tfpxtydg',quantity:1}]})" class="block w-full bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white text-center py-3 rounded-md font-medium">Get Pro</button>
                 </div>
             </div>
         </div>
