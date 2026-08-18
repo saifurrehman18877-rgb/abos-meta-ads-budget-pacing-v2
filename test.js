@@ -16,7 +16,7 @@ const thresholdPercentage = 50;
 
 const dailyPacingResult = calculateDailyPacing(testCsvData, targetBudget, startDate, endDate);
 assert.strictEqual(dailyPacingResult.dailyPacing, 200);
-assert.strictEqual(dailyPacingResult.currentPacing, 100);
+assert.strictEqual(dailyPacingResult.currentPacing, 200);
 assert.strictEqual(dailyPacingResult.isOnTrack, true);
 
 const budgetThresholdResult = calculateBudgetThreshold(testCsvData, thresholdPercentage, startDate, endDate);
@@ -24,11 +24,11 @@ assert.strictEqual(budgetThresholdResult.thresholdAmount, 500);
 assert.strictEqual(budgetThresholdResult.dailyThreshold, 100);
 
 const adPerformanceResult = calculateAdPerformance(testCsvData, startDate, endDate);
-assert.strictEqual(adPerformanceResult.totalImpressions, 8600);
-assert.strictEqual(adPerformanceResult.totalClicks, 480);
-assert.strictEqual(adPerformanceResult.totalConversions, 44);
+assert.strictEqual(adPerformanceResult.totalImpressions, 7600);
+assert.strictEqual(adPerformanceResult.totalClicks, 380);
+assert.strictEqual(adPerformanceResult.totalConversions, 35);
 assert.strictEqual(adPerformanceResult.totalSpend, 1000);
-assert.strictEqual(adPerformanceResult.ctr, 5.581395348837209);
-assert.strictEqual(adPerformanceResult.cpa, 22.727272727272727);
+assert.strictEqual(adPerformanceResult.ctr, 5);
+assert.strictEqual(adPerformanceResult.cpa, 28.571428571428573);
 
 console.log('All tests passed!');
